@@ -14,8 +14,8 @@ function App() {
                 </nav>
             </div>
             <Routes>
-                <Route path="/" element={<Page1/>}/>
-                <Route path="/about" element={<Page2/>}/> 
+                <Route path="/" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/> 
             </Routes>
             </Router>
         </header>
