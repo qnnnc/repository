@@ -1,9 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 export default function Home() {
     return (
         <div>
             <h1>Page1</h1>
+            <Outlet/>
         </div>
     )
 

@@ -1,12 +1,17 @@
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Link, Route, Routes, } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import { createRoot } from 'react-dom/client';
+
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
+
 function App() {
 
         return (
         <header>
 
-            <Router>
+            <BrowserRouter>
             <div>
                 <nav>
                     <Link to="/">Home</Link>
@@ -15,12 +20,12 @@ function App() {
             </div>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/about" element={<About/>}/> 
+                <Route path="/about" element={<About/>}/>
             </Routes>
-            </Router>
+            </BrowserRouter>
         </header>
         )
 
 }
-
+root.render(<App />);
 export default App
